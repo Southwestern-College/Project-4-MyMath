@@ -13,37 +13,42 @@ In this project, you will create a utility class named `MyMath` that provides co
 
 ## Program Specifications
 
-Design a class named `MyMath`. The class must include the following static methods:
+Design a class named `MyMath`. The class must include the following static methods and constants:
+
+### Constants:
+- `public static final double PI = 3.141592653589793;`
+- `public static final double E = 2.718281828459045;`
 
 | Return Type | Method | Description |
 |------------|--------|-------------|
-| `int` | `add(int a, int b)` | Returns the sum of two integers. |
-| `int` | `subtract(int a, int b)` | Returns the result of subtracting the second integer from the first. |
-| `int` | `multiply(int a, int b)` | Returns the product of two integers (without using `*`). |
-| `double` | `divide(int a, int b)` | Returns the result of dividing the first integer by the second (without using `/`). Assume `b` is not zero. |
-| `int` | `max(int a, int b)` | Returns the greater of two integers. |
-| `int` | `min(int a, int b)` | Returns the smaller of two integers. |
+| `double` | `add(double a, double b)` | Returns the sum of two integers. |
+| `double` | `subtract(double a, double b)` | Returns the result of subtracting the second integer from the first. |
+| `double` | `multiply(double a, double b)` | Returns the product of two integers. |
+| `double` | `divide(double a, double b)` | Returns the result of dividing the first integer by the second. The divisor `b` cannot be zero. |
+| `double` | `max(double a, double b)` | Returns the greater of two integers. |
+| `double` | `min(double a, double b)` | Returns the smaller of two integers. |
 | `boolean` | `isEven(int a)` | Returns `true` if the integer is even, `false` otherwise. |
 | `boolean` | `isOdd(int a)` | Returns `true` if the integer is odd, `false` otherwise. |
 
 ### Notes:
 - You **cannot** use the `Math` class in your implementation.
-- The `multiply` method should use repeated addition instead of the `*` operator.
-- The `divide` method should use repeated subtraction instead of the `/` operator.
+- In the `divide` method, if the divisor is zero, the program should terminate immediately with an appropriate error message. Use `System.exti(1)` to terminate the program.
 
 ## Sample Test
 
 ```java
 public class TestMyMath {
     public static void main(String[] args) {
-        System.out.println(MyMath.add(3, 5));    // 8
-        System.out.println(MyMath.subtract(10, 4)); // 6
-        System.out.println(MyMath.multiply(3, 4));  // 12
+        System.out.println(MyMath.add(3, 5));    // 8.0
+        System.out.println(MyMath.subtract(10, 4)); // 6.0
+        System.out.println(MyMath.multiply(3, 4));  // 12.0
         System.out.println(MyMath.divide(8, 2));    // 4.0
-        System.out.println(MyMath.max(7, 9));      // 9
-        System.out.println(MyMath.min(7, 9));      // 7
+        System.out.println(MyMath.max(7, 9));      // 9.0
+        System.out.println(MyMath.min(7, 9));      // 7.0
         System.out.println(MyMath.isEven(10));     // true
         System.out.println(MyMath.isOdd(11));      // true
+        System.out.println(MyMath.PI);      // 3.141592653589793
+        System.out.println(MyMath.E);      // 2.718281828459045
     }
 }
 ```
