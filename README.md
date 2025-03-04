@@ -3,7 +3,7 @@
 ## Objectives
 
 - Create a Java class with static methods.
-- Implement basic mathematical operations without using loops or arrays.
+- Implement basic mathematical operations.
 
 ## Program Description
 
@@ -13,7 +13,7 @@ In this project, you will create a utility class named `MyMath` that provides co
 
 ## Program Specifications
 
-Design a class named `MyMath`. The class must include the following static methods and constants:
+Create a class named `MyMath`. The class must include the following static methods and constants:
 
 ### Constants:
 - `public static final double PI = 3.141592653589793;`
@@ -35,6 +35,7 @@ Design a class named `MyMath`. The class must include the following static metho
 - In the `divide` method, if the divisor is zero, the program should terminate immediately with an appropriate error message. Use `System.exti(1)` to terminate the program.
 
 ## Sample Test
+The following tester class should be saved in a separate file named `TestMyMath.java`.
 
 ```java
 public class TestMyMath {
